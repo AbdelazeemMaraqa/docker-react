@@ -4,8 +4,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t MYIMAGE -f Dockerfile.dev .
+  - docker build -t abdmaraqa1997/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run MYIMAGE npm run test -- --coverage
-  # - docker run -e CI=true USERNAME/docker-react npm run test
+  # - docker run abdmaraqa1997/docker-react npm run test -- --coverage
+  - docker run -e CI=true abdmaraqa1997/docker-react npm run test
